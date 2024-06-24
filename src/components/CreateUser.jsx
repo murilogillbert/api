@@ -23,7 +23,6 @@ const CreateUser = () => {
     try {
       const response = await fetch('https://infocap-back.onrender.com/user/create', {
         method: 'POST',
-        mode: 'no-cors',  // Adicionando modo no-cors
         headers: {
           'Content-Type': 'application/json',
           // Não será possível adicionar 'Access-Control-Allow-Origin' no cliente

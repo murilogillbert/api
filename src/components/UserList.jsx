@@ -9,8 +9,8 @@ const UserList = ({ token }) => {
         const response = await fetch('https://infocap-back.onrender.com/user/findall', {
           method: 'GET',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+            //'Authorization': `Bearer ${token}`,
           },
         });
 

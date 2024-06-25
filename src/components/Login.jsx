@@ -26,8 +26,11 @@ const Login = ({ onLogin }) => {
 
       if (response.ok) {
         const data = await response.json();
-        onLogin(data.token);
-        console.log('Login successful:', data);
+        if (typeof onLogin === 'function') {
+          onLogin(data.token);
+        } else {
+          console.error('onLogin is not a function');
+        }
       } else {
         console.error('Failed to login');
       }
